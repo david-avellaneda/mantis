@@ -1,0 +1,517 @@
+:root {
+  --background: #fff;
+  --elements: #fff;
+  --text: #000000;
+  --input: #f3f3f3;
+  --button: #15925c;
+  --font: "Baloo Thambi 2", cursive;
+}
+
+[data-theme="dark"] {
+  --background: #0d1116;
+  --elements: #0d1116;
+  --text: #ffffff;
+  --input: #161c23;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  background: var(--background);
+  background-image: url("/login/assets/texture.svg");
+  background-size: 90%;
+  color: var(--text);
+  position: relative;
+  margin-block-end: 4rem;
+}
+
+h1,
+button,
+label,
+input,
+input::placeholder,
+a,
+p {
+  color: var(--text);
+  font-family: var(--font);
+}
+
+svg {
+  width: 100%;
+}
+
+i {
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header .login-logo-pepe {
+  justify-content: flex-start;
+}
+
+header .login-logo-pepe img {
+  width: 90%;
+}
+
+header .login-logo-mantis {
+  width: 35%;
+  height: fit-content;
+  justify-content: flex-end;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+[data-theme="dark"] .login-logo-mantis {
+  background-color: #fff;
+}
+
+header .login-logo-mantis img {
+  width: 100%;
+}
+
+/* Main */
+main {
+  width: 100%;
+}
+
+.login-form-content {
+  width: 100%;
+  padding: 0 2.5rem;
+}
+
+.login-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 3rem;
+}
+
+.login-title h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+#theme {
+  width: 9rem;
+  height: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+#theme i {
+  margin-inline-start: 0.5rem;
+}
+
+.login-form-container form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.login-container-inputs {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.login-container-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.login-input {
+  width: 100%;
+  position: relative;
+}
+
+.login-input .login-icon {
+  width: 8%;
+  max-width: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 2rem;
+}
+
+.login-container-input .login-icon {
+  cursor: pointer;
+}
+
+.login-input .login-icon i {
+  font-size: 1.6rem;
+}
+
+.login-container-input label,
+.login-container-input input {
+  width: 100%;
+}
+
+.login-container-input label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.login-container-input input {
+  width: 100%;
+  font-size: 1.5rem;
+  color: var(--text);
+  background-color: var(--input);
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 4.5rem 1rem 2rem;
+}
+
+[data-theme="dark"] .login-container-input input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.15);
+}
+
+.login-container-input input::placeholder {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .login-container-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login-container-input input:focus {
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+[data-theme="dark"] .login-container-input input:focus {
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+.login-alert-message {
+  width: 100%;
+}
+
+.login-alert-message p {
+  font-size: 1.4rem;
+  color: #0075ff;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+[data-theme="dark"] .login-alert-message p {
+  color: #33b1ff;
+}
+
+.login-form-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form-btn button {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text);
+  background-color: transparent;
+  border: 3px solid var(--button);
+  border-radius: 0.6rem;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  position: relative;
+  margin-block-end: 1.5rem;
+}
+
+.login-helpers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-helpers a {
+  color: var(--light-mode-buttons);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--button);
+}
+
+/* Illustration */
+.login-illustration {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 2rem;
+}
+
+.login-illustration img {
+  width: 90%;
+  padding: 0 2.5rem;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -2rem;
+}
+
+footer p {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 380px) {
+  footer {
+    bottom: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    background-size: 70%;
+  }
+  /* Header */
+  header {
+    max-width: 100rem;
+    height: 20rem;
+    padding: 0 6rem;
+    margin-block-end: 4rem;
+  }
+
+  header .login-logo-pepe img {
+    max-width: 23rem;
+  }
+
+  header .login-logo-mantis {
+    max-width: 18rem;
+    padding: 1.2rem;
+  }
+
+  .login-form-content {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .login-title {
+    margin-block-end: 4rem;
+  }
+
+  .login-title h1 {
+    font-size: 3rem;
+  }
+
+  #theme {
+    width: 13rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+
+  #theme i {
+    margin-inline-start: 0.8rem;
+  }
+
+  .login-container-inputs {
+    margin-bottom: 1.5rem;
+  }
+
+  .login-container-input {
+    margin-bottom: 3rem;
+  }
+
+  .login-input .login-icon {
+    width: 8%;
+    max-width: 2.6rem;
+  }
+
+  .login-input .login-icon i {
+    font-size: 1.8rem;
+  }
+
+  .login-container-input label {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .login-container-input input {
+    font-size: 1.8rem;
+    padding: 1.2rem 5rem 1.2rem 2rem;
+  }
+
+  .login-container-input input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .login-alert-message p {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+  }
+
+  .login-form-btn button {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-block-end: 2rem;
+  }
+
+  .login-helpers a {
+    font-size: 1.6rem;
+  }
+
+  /* Illustration */
+  .login-illustration {
+    margin-block-end: 3rem;
+  }
+
+  .login-illustration img {
+    width: 70%;
+    max-width: 60rem;
+  }
+
+  footer p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    min-height: 95vh;
+    background-size: 40%;
+    margin-block-end: 2rem;
+  }
+
+  header {
+    width: 80%;
+    max-width: 140rem;
+    height: 14rem;
+    padding: 0 6rem;
+    margin-block-end: 4rem;
+    padding: 0;
+  }
+
+  header .login-logo-pepe img {
+    max-width: 20rem;
+  }
+
+  header .login-logo-mantis {
+    max-width: 16rem;
+    padding: 1.2rem;
+  }
+
+  main {
+    width: 90%;
+    max-width: 140rem;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .login-form-container,
+  .login-illustration {
+    width: 50%;
+  }
+
+  .login-form-content {
+    width: 70%;
+    margin: 0;
+  }
+
+  .login-container-inputs {
+    margin: 0;
+  }
+
+  .login-container-input {
+    margin-bottom: 1.5rem;
+  }
+
+  .login-illustration {
+    margin: 0;
+  }
+}
+
+.login-icon.pwd svg {
+  fill: var(--text);
+  width: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .login-icon.pwd svg {
+    width: 1.8rem;
+  }
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  padding-inline-start: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox input {
+  width: auto;
+  accent-color: var(--button);
+  cursor: pointer;
+}
+.checkbox label {
+  margin: 0 0 0 1rem;
+  font-weight: 400;
+}

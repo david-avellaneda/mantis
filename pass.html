@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantis Bug Tracker | Pepe Ganga</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b20c514afe.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login/src/styles/index.css" />
+  </head>
+  <body>
+    <script>
+      if (!localStorage.getItem("theme")) {
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? localStorage.setItem("theme", "dark")
+          : localStorage.setItem("theme", "light");
+      }
+      localStorage.getItem("theme") === "dark" &&
+        document.documentElement.setAttribute("data-theme", "dark");
+    </script>
+    <header>
+      <div class="login-logo-pepe">
+        <img src="login/assets/logo-pepe.png" alt="Logotipo de Pepe Ganga" />
+      </div>
+      <div class="login-logo-mantis">
+        <img src="login/assets/logo-mantis.png" alt="Logotipo de Mantis" />
+      </div>
+    </header>
+    <main>
+      <div class="login-form-container">
+        <div class="login-form-content">
+          <div class="login-title">
+            <h1>Inicio de sesión</h1>
+            <button id="theme"></button>
+          </div>
+          <form id="form">
+            <div class="login-container-inputs">
+              <div class="login-container-input">
+                <label for="pwd">Contraseña de ""</label>
+                <div class="login-input">
+                  <input
+                    type="text"
+                    name="pwd"
+                    id="pwd"
+                    placeholder="Ingresa tu nombre contraseña"
+                  />
+                  <div class="login-icon pwd"></div>
+                </div>
+                <div class="login-alert-message"></div>
+              </div>
+              <div class="login-container-input checkbox">
+                <input type="checkbox" name="keep" id="keep" />
+                <label for="keep">Mantener mi sesión iniciada</label>
+              </div>
+              <div class="login-container-input checkbox">
+                <input type="checkbox" name="ip" id="ip" checked />
+                <label for="ip"
+                  >Permitir que tu sesión sólo sea utilizada desde esta
+                  dirección IP</label
+                >
+              </div>
+            </div>
+            <div class="login-form-btn">
+              <button type="submit">Iniciar</button>
+            </div>
+          </form>
+          <div class="login-helpers">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+        </div>
+      </div>
+      <div class="login-illustration">
+        <img
+          src="login/assets/security-animate.svg"
+          alt="Ilutración de un centro de llamadas de una empresa"
+        />
+      </div>
+    </main>
+    <footer>
+      <p>Copyright © 2023 Pepe Ganga</p>
+    </footer>
+    <script src="login/src/js/index.js" type="module"></script>
+  </body>
+</html>

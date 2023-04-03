@@ -33,7 +33,7 @@ body {
   height: 100%;
   min-height: 100vh;
   background: var(--background);
-  background-image: url("/login/assets/texture.svg");
+  background-image: url("./login/assets/texture.svg");
   background-size: 90%;
   color: var(--text);
   position: relative;

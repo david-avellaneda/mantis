@@ -163,7 +163,7 @@ export default function formValidations() {
         el.addEventListener("click", validation);
       });
       if (nameStatus || pwdStatus) {
-        window.location.href = "/pass.html";
+        window.location.href = "/mantis/pass.html";
       }
     }
   });
